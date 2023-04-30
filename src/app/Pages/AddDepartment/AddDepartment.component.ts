@@ -37,7 +37,7 @@ export class AddDepartmentComponent implements OnInit {
     {
       console.log(data)
     })
-    
+    window.location.reload();
   }
 
 

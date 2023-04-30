@@ -49,6 +49,7 @@ export class EditDeparmentComponent implements OnInit {
     {
       console.log(data)
     })
+    window.location.reload();
     
   }
 

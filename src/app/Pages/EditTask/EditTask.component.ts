@@ -51,6 +51,6 @@ export class EditTaskComponent implements OnInit {
     {
       console.log(data)
     })
-    
+    window.location.reload();
   }
 }

@@ -36,6 +36,7 @@ export class AddTaskComponent implements OnInit {
     this.taskService.AddTask(task).subscribe((data)=>{
       console.log(data)
     })
+    window.location.reload();
   }
 
 
