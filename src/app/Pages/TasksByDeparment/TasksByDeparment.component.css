@@ -1,0 +1,14 @@
+.tasks{
+     max-width: 1200px;
+     margin: 0 auto;
+     display: grid;
+     gap: 1rem;
+}
+
+@media (min-width: 600px) {
+     .tasks { grid-template-columns: repeat(3, 1fr); }
+   }
+
+   @media (min-width: 900px) {
+     .tasks { grid-template-columns: repeat(4, 1fr); }
+   }
