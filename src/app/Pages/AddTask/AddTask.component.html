@@ -1,0 +1,34 @@
+<div class="main">
+  <form [formGroup]="reactiveForm" (ngSubmit)="AddTask()" >
+    <!-- Title input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example1">Task Title</label>
+      <input type="Task Title" id="form2Example1" class="form-control" formControlName="Title"  />
+      <span *ngIf="!reactiveForm.value.Title" style="color: red;">input cannot be empty</span>
+    </div>
+    
+    <!-- Description input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example2">Description</label>
+      <input type="text" id="form2Example2" class="form-control" formControlName="Description"  />
+      
+      <span *ngIf="!reactiveForm.value.Description" style="color: red;">input cannot be empty</span>
+      
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example2">Deparment Id</label>
+      <input type="number" id="form2Example2" class="form-control" formControlName="Department_Id"  />
+      
+      <span *ngIf="!reactiveForm.value.Department_Id" style="color: red;">input cannot be empty</span>
+      
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4" >Create Task</button>
+  
+    <!-- Register buttons -->
+    
+  </form>
+
+</div>

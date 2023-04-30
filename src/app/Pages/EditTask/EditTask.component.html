@@ -1,0 +1,37 @@
+<div class="main">
+  <form [formGroup]="reactiveForm" (submit)="EditTask()" >
+    <!-- Username input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example1">Deparment Name:</label>
+      <label class="form-label" for="form2Example1">{{task.title}}</label>
+      <input type="Deparment Name" id="form2Example1" class="form-control" formControlName="Title"  />
+      <span *ngIf="!reactiveForm.value.Title" style="color: red;">input cannot be empty</span>
+    </div>
+    
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example2">Deparment number:</label>
+      <label class="form-label" for="form2Example1">{{task.description}}</label>
+      <input type="test " id="form2Example2" class="form-control" formControlName="Description"  />
+      
+      <span *ngIf="!reactiveForm.value.Description" style="color: red;">input cannot be empty</span>
+      
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example2">Deparment number:</label>
+      <label class="form-label" for="form2Example1">{{task.department_Id}}</label>
+      <input type="test " id="form2Example2" class="form-control" formControlName="Department_Id"  />
+      
+      <span *ngIf="!reactiveForm.value.Department_Id" style="color: red;">input cannot be empty</span>
+      
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4" >Edit Task</button>
+  
+    <!-- Register buttons -->
+    
+  </form>
+
+</div>

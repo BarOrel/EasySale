@@ -1,0 +1,8 @@
+<div class="main" >
+  <div class="department-details">
+    <p (click)="NavigateToTasksDeprament(item.id)">{{item.name}}</p>
+    <p>Number : {{item.id}}</p>
+    <button (click)="DeleteDeparment(item.id)">X</button>
+    <button (click)="NavigateToEditDeparment(item.id)">Edit</button>
+  </div>
+</div>

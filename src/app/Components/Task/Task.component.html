@@ -1,0 +1,9 @@
+<div class="main"  >
+  <div class="task-details">
+    <h3>{{item.title}}</h3>
+    <p>Description : {{item.description}}</p>
+    <p>Deparment ID : {{item.department_Id}}</p>
+    <button (click)="DeleteTask(item.id)">Done</button>
+    <button  (click)="NavigateToEditTask(item.id)">Edit</button>
+  </div>
+</div>

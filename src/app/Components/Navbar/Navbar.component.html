@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="route-links">
+    <button routerLink="AllTasks">Home</button>
+    <button routerLink="AddTask">Add Task</button>
+    <button routerLink="AddDeparment">Add Deparment</button>
+
+  </div>
+<h2>Deparments</h2>
+  <div class="deparments">
+    <app-Deparment *ngFor="let deparment of Deparments" [item]="deparment"></app-Deparment>
+  </div>
+</div>
