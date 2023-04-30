@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   LoadPage(){
     this.taskService.GetTasks().subscribe((data:any)=>{
-      console.log(data)
+      
       this.Tasks = data
     })
   }

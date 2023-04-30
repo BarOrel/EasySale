@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Deparment } from 'src/app/Models/Deparment';
 import { DeparmentService } from 'src/app/Services/Deparment/Deparment.service';
+import { EventService } from 'src/app/Services/EventClick/Event.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class AddDepartmentComponent implements OnInit {
 
   reactiveForm:FormGroup;
   
-  constructor(private deparmentService:DeparmentService) { }
+  constructor(private deparmentService:DeparmentService,private eventService:EventService) { }
   
   ngOnInit() {
     this.reactiveForm = new FormGroup({
@@ -35,9 +36,8 @@ export class AddDepartmentComponent implements OnInit {
     console.log(this.reactiveForm)
     this.deparmentService.AddDeparment(deparment).subscribe((data)=>
     {
-      console.log(data)
+      this.eventService.sendClickEvent();
     })
-    window.location.reload();
   }
 
 

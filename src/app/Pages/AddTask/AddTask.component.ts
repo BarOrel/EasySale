@@ -31,12 +31,12 @@ export class AddTaskComponent implements OnInit {
     task.Title = this.reactiveForm.value.Title;
     task.Description = this.reactiveForm.value.Description;
     task.Department_Id = this.reactiveForm.value.Department_Id;
-    console.log(this.reactiveForm)
 
     this.taskService.AddTask(task).subscribe((data)=>{
-      console.log(data)
+     
+      
     })
-    window.location.reload();
+    
   }
 
 

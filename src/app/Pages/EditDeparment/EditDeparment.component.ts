@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Deparment } from 'src/app/Models/Deparment';
 import { DeparmentService } from 'src/app/Services/Deparment/Deparment.service';
+import { EventService } from 'src/app/Services/EventClick/Event.service';
 
 @Component({
   selector: 'app-EditDeparment',
@@ -14,7 +15,7 @@ export class EditDeparmentComponent implements OnInit {
   department:any;
   reactiveForm:FormGroup;
   
-  constructor(private deparmentService:DeparmentService,private route:ActivatedRoute) { 
+  constructor(private deparmentService:DeparmentService,private route:ActivatedRoute,private eventService:EventService) { 
 
   }
   
@@ -44,12 +45,11 @@ export class EditDeparmentComponent implements OnInit {
     deparment.Name = this.reactiveForm.value.Name;
     deparment.Number = this.reactiveForm.value.Number;
     
-    console.log(this.reactiveForm)
     this.deparmentService.EditDeparment(deparment).subscribe((data)=>
     {
-      console.log(data)
+      this.eventService.sendClickEvent()
     })
-    window.location.reload();
+    
     
   }
 
