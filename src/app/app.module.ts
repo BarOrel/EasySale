@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './Components/Navbar/Navbar.component';
 import { DeparmentComponent } from './Components/Deparment/Deparment.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
